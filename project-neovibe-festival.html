@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="web_standard" name="shell-type">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Syne:wght@600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet">
+    <style>
+      @layer base {
+
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          overscroll-behavior: none;
+        }
+
+        main>:first-child {
+          margin-top: 0 !important;
+        }
+
+        main>:last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "on-background": "#e3e1e9",
+              "on-primary": "#003548",
+              "on-secondary-fixed-variant": "#004c69",
+              "on-tertiary": "#472a00",
+              "surface-dim": "#121318",
+              "surface-container-lowest": "#0d0e13",
+              "inverse-primary": "#006688",
+              "surface": "#121318",
+              "surface-container": "#1e1f25",
+              "error-container": "#93000a",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed": "#c4e7ff",
+              "error": "#ffb4ab",
+              "on-secondary-fixed": "#001e2c",
+              "tertiary-container": "#f9a111",
+              "secondary-fixed-dim": "#7bd0ff",
+              "surface-container-high": "#292a2f",
+              "on-error": "#690005",
+              "on-secondary-container": "#00374d",
+              "on-primary-fixed": "#001e2b",
+              "outline-variant": "#3d484f",
+              "background": "#121318",
+              "tertiary-fixed": "#ffddb8",
+              "secondary-container": "#00a6e0",
+              "surface-container-low": "#1a1b21",
+              "secondary": "#7bd0ff",
+              "surface-bright": "#38393f",
+              "on-surface-variant": "#bcc8d1",
+              "tertiary": "#ffc57f",
+              "on-primary-fixed-variant": "#004d67",
+              "on-tertiary-fixed": "#2a1700",
+              "outline": "#86929a",
+              "on-secondary": "#00354a",
+              "on-tertiary-fixed-variant": "#653e00",
+              "primary-fixed-dim": "#75d1ff",
+              "inverse-on-surface": "#2f3036",
+              "on-tertiary-container": "#643d00",
+              "surface-container-highest": "#34343a",
+              "surface-variant": "#34343a",
+              "primary-container": "#00c2ff",
+              "tertiary-fixed-dim": "#ffb95f",
+              "surface-tint": "#75d1ff",
+              "on-surface": "#e3e1e9",
+              "primary": "#92d9ff",
+              "on-primary-container": "#004c66",
+              "inverse-surface": "#e3e1e9",
+              "primary-fixed": "#c2e8ff"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.125rem",
+              "lg": "0.25rem",
+              "xl": "0.5rem",
+              "full": "0.75rem"
+            },
+            "spacing": {
+              "margin": "2rem",
+              "margin-mobile": "1rem",
+              "gutter-desktop": "2rem",
+              "space-sm": "0.5rem",
+              "space-xl": "2.5rem",
+              "space-2xl": "4rem",
+              "gutter-mobile": "1rem",
+              "margin-desktop": "4rem",
+              "space-lg": "1.5rem",
+              "gutter": "1.5rem",
+              "space-md": "1rem",
+              "space-xs": "0.25rem"
+            },
+            "fontFamily": {
+              "ui-action": ["Inter"],
+              "headline-xl": ["Syne"],
+              "headline-lg-mobile": ["Syne"],
+              "body-sm": ["Inter"],
+              "display-hero-mobile": ["Syne"],
+              "headline-xl-mobile": ["Syne"],
+              "display-hero": ["Syne"],
+              "label-mono-xs": ["JetBrains Mono"],
+              "body-md": ["Inter"],
+              "headline-lg": ["Syne"],
+              "label-mono-sm": ["JetBrains Mono"],
+              "headline-md": ["Syne"],
+              "body-lg": ["Inter"],
+              "headline-sm": ["Syne"]
+            },
+            "fontSize": {
+              "ui-action": ["14px", {
+                "lineHeight": "20px",
+                "letterSpacing": "0.01em",
+                "fontWeight": "600"
+              }],
+              "headline-xl": ["48px", {
+                "lineHeight": "56px",
+                "letterSpacing": "-0.025em",
+                "fontWeight": "700"
+              }],
+              "headline-lg-mobile": ["26px", {
+                "lineHeight": "34px",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "700"
+              }],
+              "body-sm": ["13px", {
+                "lineHeight": "20px",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }],
+              "display-hero-mobile": ["38px", {
+                "lineHeight": "46px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "800"
+              }],
+              "headline-xl-mobile": ["32px", {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }],
+              "display-hero": ["64px", {
+                "lineHeight": "72px",
+                "letterSpacing": "-0.03em",
+                "fontWeight": "800"
+              }],
+              "label-mono-xs": ["10px", {
+                "lineHeight": "14px",
+                "letterSpacing": "0.12em",
+                "fontWeight": "600"
+              }],
+              "body-md": ["15px", {
+                "lineHeight": "24px",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }],
+              "headline-lg": ["36px", {
+                "lineHeight": "44px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }],
+              "label-mono-sm": ["11px", {
+                "lineHeight": "16px",
+                "letterSpacing": "0.08em",
+                "fontWeight": "500"
+              }],
+              "headline-md": ["24px", {
+                "lineHeight": "32px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "600"
+              }],
+              "body-lg": ["18px", {
+                "lineHeight": "28px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }],
+              "headline-sm": ["20px", {
+                "lineHeight": "28px",
+                "letterSpacing": "-0.005em",
+                "fontWeight": "600"
+              }]
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+  </head>
+
+  <body class="bg-background font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-dim/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+      <div class="h-20 w-full px-margin-desktop flex items-center justify-between gap-space-lg"><a href="index.html"
+          class="flex items-center gap-space-md"><img alt="Sky Bound Production Logo"
+            class="h-8 w-8 rounded-full object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2o4qVVa6nDPN9H1bd34N3zMNr0sxTIKOBg2bSN6dg1IdBn3rE3wVocWkIdvB8rvsm-Ig30QZ0ep438YmJzzJ9XG-HHerJlvfceGN28VlIsQS5ifhEHDPhbItoK3YrE3hjfVy_m1qIec8NJy3-xotUhoKiyee6eyc-RXukZoPz8OORyzNtovKy-ejnFLGeDoixzfUDwjwJYqZ5OclopcDlJ1iqSDTsi-PGa60OE_2gKYtfGZ9qrAvvDIHTGxkgpK37s8o"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">Sky Bound Production</span></a>
+        <nav class="hidden xl:flex items-center gap-space-lg"
+          data-active-classes="bg-primary-container text-on-primary-container font-ui-action text-ui-action rounded-lg px-space-md py-space-xs">
+          <a class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="portfolio-and-showreel" href="index.html">Portfolio &amp; Showreel</a><a
+            class="bg-primary-container text-on-primary-container font-ui-action text-ui-action rounded-lg px-space-md py-space-xs"
+            data-path="featured-project" href="projects.html">Projects</a><a
+            class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="services-and-drone-ops" href="services.html">Services &amp; Drone Ops</a><a
+            class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="contact" href="contact.html">Contact</a>
+        </nav><button id="mobile-menu-btn"
+          class="xl:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container text-on-surface"
+          aria-label="Toggle menu"><span class="material-symbols-outlined">menu</span></button>
+        
+      </div>
+    </header>
+    <div id="mobile-menu-panel"
+      class="hidden fixed inset-0 top-20 z-40 bg-surface-dim/98 backdrop-blur-xl xl:hidden overflow-y-auto">
+      <nav class="flex flex-col p-margin-mobile gap-space-xs"
+        data-active-classes="bg-primary-container text-on-primary-container font-ui-action text-ui-action rounded-lg px-space-md py-space-xs">
+        <a class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors block w-full px-space-md py-space-sm rounded-lg"
+          data-path="portfolio-and-showreel" href="index.html">Portfolio &amp; Showreel</a><a
+          class="bg-primary-container text-on-primary-container font-ui-action text-ui-action rounded-lg px-space-md py-space-sm block w-full"
+          data-path="featured-project" href="projects.html">Projects</a><a
+          class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors block w-full px-space-md py-space-sm rounded-lg"
+          data-path="services-and-drone-ops" href="services.html">Services &amp; Drone Ops</a><a
+          class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors block w-full px-space-md py-space-sm rounded-lg"
+          data-path="contact" href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <main class="w-full pt-20 bg-background">
+      <div class="flex flex-col w-full text-on-surface select-none">
+        <!-- Breadcrumbs -->
+        <div
+          class="w-full bg-surface-container-lowest/80 backdrop-blur-md px-margin-mobile md:px-margin-desktop py-space-sm flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+          <div class="flex items-center gap-space-md">
+            <a class="inline-flex items-center gap-space-xs font-ui-action text-ui-action text-on-surface-variant hover:text-primary transition-colors group"
+              href="projects.html">
+              <span
+                class="material-symbols-outlined text-sm transition-transform group-hover:-translate-x-1">arrow_back</span>
+              <span>Back to Projects Catalog</span>
+            </a>
+            <span class="text-outline-variant font-label-mono-xs">/</span>
+            <span
+              class="font-label-mono-xs text-label-mono-xs text-secondary font-semibold uppercase tracking-widest">MISSION
+              ARCHIVE #03</span>
+          </div>
+          <span
+            class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono-xs text-label-mono-xs text-tertiary">DOWNTOWN
+            ARENA DISTRICT</span>
+        </div>
+
+        <!-- Hero -->
+        <section class="relative w-full overflow-hidden bg-surface-container-lowest">
+          <div class="relative w-full min-h-[60vh] lg:min-h-[70vh] flex items-end">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center"
+              style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBwSyIixgeykWfH0Hdemt9HbqipQHiftkkKEyf26Bu_uUnXRye8ELbhKKaSdMejwUzqC-wzMnEpvAyCKdx-M0OZuRXZQnEW8iSS52eG6mJwOmlrX6N-B75IpD-uglB55ggBp1vUKNbNvV4_qcf6J1pXuYBCglscKOYOf1-bvdIP8nhNl1N_LRcj3cG2_hDCq0b3HpxOIdWGzRdWAmTQ4KdKXXx0VPR9BUOlCSuH0Tc2_YtyaDn-IWmpRg&quot;);">
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/40 to-transparent">
+            </div>
+            <div class="relative w-full px-margin-mobile md:px-margin-desktop pb-space-2xl flex flex-col gap-space-md">
+              <div class="flex items-center gap-space-sm">
+                <span
+                  class="px-space-sm py-space-xs rounded bg-primary-container/90 text-on-primary-container font-label-mono-xs text-label-mono-xs uppercase tracking-widest">Case
+                  Study 03</span>
+                <span
+                  class="px-space-sm py-space-xs rounded bg-surface-container-high/90 text-on-surface-variant font-label-mono-xs text-label-mono-xs uppercase tracking-widest">Live
+                  Broadcast</span>
+              </div>
+              <h1
+                class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface uppercase tracking-tight max-w-3xl">
+                NeoVibe Festival Live Stage</h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Synchronized 4-camera live stream
+                switching direct to YouTube Live and Facebook Live with bonded cellular redundancy and zero dropped
+                frames.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mission Details -->
+        <section class="w-full px-margin-mobile md:px-margin-desktop py-space-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+            <div class="md:col-span-2 flex flex-col gap-space-md">
+              <h2 class="font-headline-md text-headline-md text-on-surface">Mission Overview</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Synchronized 4-camera live
+                stream switching direct to YouTube Live and Facebook Live with bonded cellular redundancy and zero
+                dropped frames. Every frame was captured under FAA Part 107 compliant flight plans with real-time
+                telemetry monitoring, delivering broadcast-ready masters synced to the client's brand color science.</p>
+              <div class="flex flex-wrap gap-space-sm pt-space-sm">
+                <span
+                  class="px-space-sm py-space-xs rounded bg-surface-container-high font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-widest">4-CAM
+                  SWITCH</span>
+                <span
+                  class="px-space-sm py-space-xs rounded bg-surface-container-high font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-widest">ZERO
+                  DROPPED FRAMES</span>
+              </div>
+            </div>
+            <div
+              class="flex flex-col gap-space-md p-space-lg rounded-xl bg-surface-container-low border border-outline-variant/30">
+              <h3 class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface-variant tracking-widest">
+                Production Telemetry</h3>
+              <div class="flex flex-col gap-space-xs"><span
+                  class="font-label-mono-xs text-label-mono-xs text-outline uppercase">Live Director</span><span
+                  class="font-body-sm text-body-sm text-on-surface">Sachith Malshan</span></div>
+              <div class="flex flex-col gap-space-xs"><span
+                  class="font-label-mono-xs text-label-mono-xs text-outline uppercase">Platform</span><span
+                  class="font-body-sm text-body-sm text-on-surface">Canon XC60 Rig • Bonded Dual Cellular</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="w-full px-margin-mobile md:px-margin-desktop pb-space-2xl">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-space-md p-space-xl rounded-xl bg-surface-container-low border border-outline-variant/30">
+            <div class="flex flex-col gap-space-xs">
+              <h3 class="font-headline-sm text-headline-sm text-on-surface">Planning a shoot like this?</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Dispatch our flight & camera crew for your
+                next production.</p>
+            </div>
+            <div class="flex items-center gap-space-sm">
+              <a href="contact.html"
+                class="px-space-lg py-space-sm rounded-lg bg-primary-container text-on-primary-container font-ui-action text-ui-action">Contact
+                Us</a>
+              <a href="projects.html"
+                class="px-space-lg py-space-sm rounded-lg bg-surface-container text-on-surface font-ui-action text-ui-action">More
+                Projects</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="w-full bg-surface-container-lowest pt-space-2xl pb-space-xl shadow-[0_-1px_12px_rgba(0,0,0,0.5)]">
+      <div class="w-full px-margin-desktop">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-desktop pb-space-2xl">
+          <div class="flex flex-col gap-space-md">
+            <div class="flex items-center gap-space-sm"><img alt="Sky Bound Production Logo"
+                class="h-8 w-8 rounded-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAC2exQGSbjgGCUn80fBHeXDPaRpnyitJlmOFE_9KTfakGQu5vit5NGS0EuUJaD93gRnK4GCTuhRG_kHvAB929axpbRnlYUY6SKnj-9BLkt5w9KMQ_ktizMuK-DjjiSTww2p8pGshVR9GBwWL9ReI5-M-cUAF2cRwup-gCCTc0AMDSrYOOxOM9XAfasUpPDQr_r7eFOXCxpnfGqLiZQJvLEaqjK537CRCvDLJEoWzu5c1x_YXIhgKNenfI7sKpLP4isLI"><span
+                class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">Sky Bound</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">High-end cinematic visuals, aerial
+              drone cinematography, and live dynamic multi-cam broadcasts engineered for bold brands worldwide.</p>
+            <div class="flex items-center gap-space-xs"><span
+                class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-high text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest"><span
+                  class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>FAA Part 107 Certified</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-space-sm"><span
+              class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface">Aerial &amp; Cinema</span><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">FPV Cinematic Pursuit</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Heavy-Lift Drone Rigging</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Multi-Cam Live Switcher</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Color Grading &amp; Master HDR</a></div>
+          <div class="flex flex-col gap-space-sm"><span
+              class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface">Production Hub</span><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Showreel 2024 / 2025</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Raw Footage Review</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Flight Permits &amp; Compliance</a></div>
+          <div class="flex flex-col gap-space-sm"><span
+              class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface">Connect &amp; Dispatch</span><span
+              class="font-body-sm text-body-sm text-on-surface-variant">Los Angeles • Atlanta • Worldwide
+              Ops</span><span
+              class="font-label-mono-sm text-label-mono-sm text-secondary font-semibold tracking-wide">ops@skyboundproduction.com</span>
+            <div class="flex items-center gap-space-sm pt-space-xs"><a
+                class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all"
+                href="https://wa.me/94788898332" rel="noopener noreferrer" target="_blank" aria-label="WhatsApp"><svg
+                  viewBox="0 0 448 512" class="w-4 h-4 fill-current">
+                  <path
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                </svg></a><a
+                class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all"
+                href="https://www.facebook.com/profile.php?id=61564801180956&amp;mibextid=ZbWKwL"
+                rel="noopener noreferrer" target="_blank" aria-label="Facebook"><svg viewBox="0 0 320 512"
+                  class="w-4 h-4 fill-current">
+                  <path
+                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                </svg></a><a
+                class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all"
+                href="https://www.instagram.com/_rasi_r_rajapaksha_?stkn=cWN1bGFhajZtdDR0" rel="noopener noreferrer"
+                target="_blank" aria-label="Instagram"><svg viewBox="0 0 448 512" class="w-4 h-4 fill-current">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg></a><a
+                class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all"
+                href="https://www.tiktok.com/@skybound.producti2?_r=1&amp;_t=ZS-99y1sm1ZZty" rel="noopener noreferrer"
+                target="_blank" aria-label="TikTok"><svg viewBox="0 0 448 512" class="w-4 h-4 fill-current">
+                  <path
+                    d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278a74.6 74.6 0 1 0 52.2 71.2V0h89.1a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+                </svg></a></div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-between pt-space-lg gap-space-md bg-surface-container-lowest">
+          <span class="font-body-sm text-body-sm text-outline">© 2024 Sky Bound Production. All rights reserved.
+            Cinematic aerial engineering.</span>
+          <div class="flex items-center gap-space-lg"><a
+              class="font-body-sm text-body-sm text-outline hover:text-on-surface transition-colors" href="#">Flight
+              Safety &amp; Waivers</a><a
+              class="font-body-sm text-body-sm text-outline hover:text-on-surface transition-colors" href="#">Terms of
+              Dispatch</a><a class="font-body-sm text-body-sm text-outline hover:text-on-surface transition-colors"
+              href="#">Privacy Policy</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function() {
+        var btn = document.getElementById('mobile-menu-btn');
+        var panel = document.getElementById('mobile-menu-panel');
+        if (!btn || !panel) return;
+
+        function closeMenu() {
+          panel.classList.add('hidden');
+          btn.querySelector('span').textContent = 'menu';
+        }
+        btn.addEventListener('click', function() {
+          var isHidden = panel.classList.toggle('hidden');
+          btn.querySelector('span').textContent = isHidden ? 'menu' : 'close';
+        });
+        panel.querySelectorAll('a').forEach(function(a) {
+          a.addEventListener('click', closeMenu);
+        });
+      })();
+    </script>
+  </body>
+
+</html>

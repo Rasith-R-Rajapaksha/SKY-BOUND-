@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="web_standard" name="shell-type">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Syne:wght@600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet">
+    <style>
+      @layer base {
+
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          overscroll-behavior: none;
+        }
+
+        main>:first-child {
+          margin-top: 0 !important;
+        }
+
+        main>:last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "on-background": "#e3e1e9",
+              "on-primary": "#003548",
+              "on-secondary-fixed-variant": "#004c69",
+              "on-tertiary": "#472a00",
+              "surface-dim": "#121318",
+              "surface-container-lowest": "#0d0e13",
+              "inverse-primary": "#006688",
+              "surface": "#121318",
+              "surface-container": "#1e1f25",
+              "error-container": "#93000a",
+              "on-error-container": "#ffdad6",
+              "secondary-fixed": "#c4e7ff",
+              "error": "#ffb4ab",
+              "on-secondary-fixed": "#001e2c",
+              "tertiary-container": "#f9a111",
+              "secondary-fixed-dim": "#7bd0ff",
+              "surface-container-high": "#292a2f",
+              "on-error": "#690005",
+              "on-secondary-container": "#00374d",
+              "on-primary-fixed": "#001e2b",
+              "outline-variant": "#3d484f",
+              "background": "#121318",
+              "tertiary-fixed": "#ffddb8",
+              "secondary-container": "#00a6e0",
+              "surface-container-low": "#1a1b21",
+              "secondary": "#7bd0ff",
+              "surface-bright": "#38393f",
+              "on-surface-variant": "#bcc8d1",
+              "tertiary": "#ffc57f",
+              "on-primary-fixed-variant": "#004d67",
+              "on-tertiary-fixed": "#2a1700",
+              "outline": "#86929a",
+              "on-secondary": "#00354a",
+              "on-tertiary-fixed-variant": "#653e00",
+              "primary-fixed-dim": "#75d1ff",
+              "inverse-on-surface": "#2f3036",
+              "on-tertiary-container": "#643d00",
+              "surface-container-highest": "#34343a",
+              "surface-variant": "#34343a",
+              "primary-container": "#00c2ff",
+              "tertiary-fixed-dim": "#ffb95f",
+              "surface-tint": "#75d1ff",
+              "on-surface": "#e3e1e9",
+              "primary": "#92d9ff",
+              "on-primary-container": "#004c66",
+              "inverse-surface": "#e3e1e9",
+              "primary-fixed": "#c2e8ff"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.125rem",
+              "lg": "0.25rem",
+              "xl": "0.5rem",
+              "full": "0.75rem"
+            },
+            "spacing": {
+              "margin": "2rem",
+              "margin-mobile": "1rem",
+              "gutter-desktop": "2rem",
+              "space-sm": "0.5rem",
+              "space-xl": "2.5rem",
+              "space-2xl": "4rem",
+              "gutter-mobile": "1rem",
+              "margin-desktop": "4rem",
+              "space-lg": "1.5rem",
+              "gutter": "1.5rem",
+              "space-md": "1rem",
+              "space-xs": "0.25rem"
+            },
+            "fontFamily": {
+              "ui-action": ["Inter"],
+              "headline-xl": ["Syne"],
+              "headline-lg-mobile": ["Syne"],
+              "body-sm": ["Inter"],
+              "display-hero-mobile": ["Syne"],
+              "headline-xl-mobile": ["Syne"],
+              "display-hero": ["Syne"],
+              "label-mono-xs": ["JetBrains Mono"],
+              "body-md": ["Inter"],
+              "headline-lg": ["Syne"],
+              "label-mono-sm": ["JetBrains Mono"],
+              "headline-md": ["Syne"],
+              "body-lg": ["Inter"],
+              "headline-sm": ["Syne"]
+            },
+            "fontSize": {
+              "ui-action": ["14px", {
+                "lineHeight": "20px",
+                "letterSpacing": "0.01em",
+                "fontWeight": "600"
+              }],
+              "headline-xl": ["48px", {
+                "lineHeight": "56px",
+                "letterSpacing": "-0.025em",
+                "fontWeight": "700"
+              }],
+              "headline-lg-mobile": ["26px", {
+                "lineHeight": "34px",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "700"
+              }],
+              "body-sm": ["13px", {
+                "lineHeight": "20px",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }],
+              "display-hero-mobile": ["38px", {
+                "lineHeight": "46px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "800"
+              }],
+              "headline-xl-mobile": ["32px", {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }],
+              "display-hero": ["64px", {
+                "lineHeight": "72px",
+                "letterSpacing": "-0.03em",
+                "fontWeight": "800"
+              }],
+              "label-mono-xs": ["10px", {
+                "lineHeight": "14px",
+                "letterSpacing": "0.12em",
+                "fontWeight": "600"
+              }],
+              "body-md": ["15px", {
+                "lineHeight": "24px",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }],
+              "headline-lg": ["36px", {
+                "lineHeight": "44px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "700"
+              }],
+              "label-mono-sm": ["11px", {
+                "lineHeight": "16px",
+                "letterSpacing": "0.08em",
+                "fontWeight": "500"
+              }],
+              "headline-md": ["24px", {
+                "lineHeight": "32px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "600"
+              }],
+              "body-lg": ["18px", {
+                "lineHeight": "28px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }],
+              "headline-sm": ["20px", {
+                "lineHeight": "28px",
+                "letterSpacing": "-0.005em",
+                "fontWeight": "600"
+              }]
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+  </head>
+
+  <body class="bg-background font-body-md text-on-surface antialiased">
+    <header
+      class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-dim/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+      <div class="h-20 w-full px-margin-desktop flex items-center justify-between gap-space-lg"><a href="index.html"
+          class="flex items-center gap-space-md"><img alt="Sky Bound Production Logo"
+            class="h-8 w-8 rounded-full object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2o4qVVa6nDPN9H1bd34N3zMNr0sxTIKOBg2bSN6dg1IdBn3rE3wVocWkIdvB8rvsm-Ig30QZ0ep438YmJzzJ9XG-HHerJlvfceGN28VlIsQS5ifhEHDPhbItoK3YrE3hjfVy_m1qIec8NJy3-xotUhoKiyee6eyc-RXukZoPz8OORyzNtovKy-ejnFLGeDoixzfUDwjwJYqZ5OclopcDlJ1iqSDTsi-PGa60OE_2gKYtfGZ9qrAvvDIHTGxkgpK37s8o"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">Sky Bound Production</span></a>
+        <nav class="hidden xl:flex items-center gap-space-lg"
+          data-active-classes="bg-primary-container text-on-primary-container font-ui-action text-ui-action rounded-lg px-space-md py-space-xs">
+          <a class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="portfolio-and-showreel" href="index.html">Portfolio &amp; Showreel</a><a
+            class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="featured-project" href="projects.html">Projects</a><a
+            class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="services-and-drone-ops" href="services.html">Services &amp; Drone Ops</a><a
+            class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="contact" href="contact.html">Contact</a>
+        </nav><button id="mobile-menu-btn"
+          class="xl:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container text-on-surface"
+          aria-label="Toggle menu"><span class="material-symbols-outlined">menu</span></button>
+        
+      </div>
+    </header>
+    <div id="mobile-menu-panel"
+      class="hidden fixed inset-0 top-20 z-40 bg-surface-dim/98 backdrop-blur-xl xl:hidden overflow-y-auto">
+      <nav class="flex flex-col p-margin-mobile gap-space-xs"
+        data-active-classes="bg-primary-container text-on-primary-container font-ui-action text-ui-action rounded-lg px-space-md py-space-xs">
+        <a class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors block w-full px-space-md py-space-sm rounded-lg"
+          data-path="portfolio-and-showreel" href="index.html">Portfolio &amp; Showreel</a><a
+          class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors block w-full px-space-md py-space-sm rounded-lg"
+          data-path="featured-project" href="projects.html">Projects</a><a
+          class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors block w-full px-space-md py-space-sm rounded-lg"
+          data-path="services-and-drone-ops" href="services.html">Services &amp; Drone Ops</a><a
+          class="font-ui-action text-ui-action text-on-surface-variant hover:text-on-surface transition-colors block w-full px-space-md py-space-sm rounded-lg"
+          data-path="contact" href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <main class="w-full pt-20 bg-background">
+      <div class="flex flex-col w-full text-on-surface select-none">
+        <!-- Top Utility & Telemetry Breadcrumbs Bar -->
+        <div
+          class="w-full bg-surface-container-lowest/80 backdrop-blur-md px-margin-mobile md:px-margin-desktop py-space-sm flex flex-wrap items-center justify-between gap-space-sm shadow-sm">
+          <div class="flex items-center gap-space-md">
+            <a class="inline-flex items-center gap-space-xs font-ui-action text-ui-action text-on-surface-variant hover:text-primary transition-colors group"
+              href="projects.html">
+              <span
+                class="material-symbols-outlined text-sm transition-transform group-hover:-translate-x-1">arrow_back</span>
+              <span class="">Back to Projects Catalog</span>
+            </a>
+            <span class="text-outline-variant font-label-mono-xs">/</span>
+            <div class="flex items-center gap-space-xs">
+              <img alt="Sky Bound Crest" class="w-5 h-5 rounded-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUhtdHARuEGkO8vNQ5Dn3CbruF_HNdB-Z1tBkP8viQGt0HB_4rDX0KRMX26ximui7IvvT1Qju4sqonFbY3Xqt324PPsDDa59w3twJIncPqQ-UeffHwl8YoXk1Z4IZNdq2hvO9jcwgN106_ZLObR4ES2L_XDp_ewypTXjbvUISFzGN3t57rALlhr5BhglkKVqZfU8gXhTotyIH12ealsKvL1TFDcr0DLHn1mLGYYIXw_UaklDK895i0X22EK171wgUd_Ls">
+              <span
+                class="font-label-mono-xs text-label-mono-xs text-secondary font-semibold uppercase tracking-widest">MISSION
+                ARCHIVE #01</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-md">
+            <div
+              class="hidden sm:flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-surface-container text-on-surface-variant font-label-mono-xs text-label-mono-xs">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+              <span class="">PRORES 422 HQ</span>
+              <span class="text-outline-variant">•</span>
+              <span class="">DUAL-PILOT FPV</span>
+            </div>
+            <span
+              class="px-space-sm py-0.5 rounded bg-surface-container-high font-label-mono-xs text-label-mono-xs text-tertiary">
+              CHAMONIX-MONT-BLANC
+            </span>
+          </div>
+        </div>
+        <!-- Grand Cinematic Hero Section -->
+        <section class="relative w-full overflow-hidden bg-surface-container-lowest">
+          <!-- Cinematic Full-Bleed Media Plate with Gradients -->
+          <div class="relative w-full min-h-[82vh] lg:min-h-[90vh] flex items-end">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center"
+              data-alt="High-stakes FPV chase drone tracking an orange jacketed snowboarder carving down a razor-sharp icy knife-edge mountain ridge in Chamonix French Alps at sunset, golden alpine glow on craggy peaks, telemetry viewfinder overlay, cinematic 4K hyper-clarity."
+              style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBpbsV9Lk4Yf5jmAASEEdEz-etQY00Kvf2KQiSUpO3ZDNX37HxKu67rw8XTiUEDIqkLNpC0zngSL0zRDWR3QM5igD_aQp5p3gmz05_OSMiTgCTVp8YKh_v8VLsIO7Fi9Z3T3wv05IUNScxE4yQkq0i6plkJrUADRmei1qs6HXbl5aLInP0Gp-7e3VQnu-gwTrBNHMW0yj7LhQJ9f3NrwfSHAbDgk2M63X5NnnRa7YNQAKiquQR5UgSOGQ&quot;);">
+              <!-- Top and bottom camera vignette gradients -->
+              <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-surface-dim/70"></div>
+              <div
+                class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(13,14,19,0.75)_100%)]">
+              </div>
+            </div>
+            <!-- Live HUD Overlays on Hero -->
+            <div
+              class="absolute top-6 left-margin-mobile md:left-margin-desktop right-margin-mobile md:right-margin-desktop flex items-center justify-between pointer-events-none">
+              <!-- Top Left Viewfinder Telemetry -->
+              <div
+                class="flex items-center gap-space-sm bg-surface-container-lowest/70 backdrop-blur-md px-space-sm py-space-xs rounded font-label-mono-xs text-label-mono-xs text-on-surface">
+                <span class="inline-flex items-center gap-1 text-error font-bold">
+                  <span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                  REC
+                </span>
+                <span class="text-outline-variant">|</span>
+                <span class="">4K 60FPS</span>
+                <span class="text-outline-variant">|</span>
+                <span class="text-primary">APPLE LOG</span>
+                <span class="text-outline-variant">|</span>
+                <span class="">1/120s ƒ/2.8 ISO 250</span>
+              </div>
+              <!-- Top Right Mission Altitude Pill -->
+              <div
+                class="hidden md:flex items-center gap-space-sm bg-surface-container-lowest/70 backdrop-blur-md px-space-sm py-space-xs rounded font-label-mono-xs text-label-mono-xs text-on-surface">
+                <span class="text-tertiary">GPS LOCK: 18 SATS</span>
+                <span class="text-outline-variant">|</span>
+                <span class="">ALT: 3,480M MSL</span>
+                <span class="text-outline-variant">|</span>
+                <span class="text-secondary">CEILING: 120M AGL</span>
+                <span class="text-outline-variant">|</span>
+                <span class="text-error font-semibold">-14°C</span>
+              </div>
+            </div>
+            <!-- Center Optical HUD Crosshair -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40">
+              <svg class="w-48 h-48 text-primary" fill="none" stroke="currentColor" stroke-width="0.75"
+                viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="32" stroke-dasharray="2 4"></circle>
+                <line x1="50" x2="50" y1="12" y2="28"></line>
+                <line x1="50" x2="50" y1="72" y2="88"></line>
+                <line x1="12" x2="28" y1="50" y2="50"></line>
+                <line x1="72" x2="88" y1="50" y2="50"></line>
+                <circle cx="50" cy="50" fill="currentColor" r="1.5"></circle>
+              </svg>
+            </div>
+            <!-- Hero Content Scrim Box -->
+            <div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop pb-space-2xl pt-space-2xl">
+              <div class="max-w-4xl flex flex-col gap-space-md">
+                <!-- Client & Partnership Header -->
+                <div class="flex flex-wrap items-center gap-space-sm">
+                  <span
+                    class="px-space-sm py-0.5 rounded bg-primary-container text-on-primary-container font-label-mono-xs text-label-mono-xs tracking-wider uppercase font-semibold">
+                    FLAGSHIP PRODUCTION
+                  </span>
+                  <span class="text-secondary font-label-mono-sm text-label-mono-sm uppercase tracking-wider">
+                    Porsche Motorsport × Alpine Unit
+                  </span>
+                </div>
+                <!-- Hero Headline -->
+                <h1
+                  class="font-headline-xl text-headline-xl md:text-[56px] md:leading-[64px] font-extrabold uppercase tracking-tight text-on-surface">
+                  Alpine Apex <br class="hidden sm:inline">
+                  <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary-container">
+                    Expedition
+                  </span>
+                </h1>
+                <!-- Discipline Tags -->
+                <div class="flex flex-wrap items-center gap-space-xs">
+                  <span
+                    class="px-space-sm py-space-xs rounded bg-surface-container-high/80 backdrop-blur text-primary font-label-mono-xs text-label-mono-xs">
+                    COMMERCIAL PHOTOGRAPHY
+                  </span>
+                  <span
+                    class="px-space-sm py-space-xs rounded bg-surface-container-high/80 backdrop-blur text-secondary font-label-mono-xs text-label-mono-xs">
+                    4K VIDEOGRAPHY
+                  </span>
+                  <span
+                    class="px-space-sm py-space-xs rounded bg-surface-container-high/80 backdrop-blur text-tertiary font-label-mono-xs text-label-mono-xs">
+                    DRONE CINEMATOGRAPHY (DJI NEO 2)
+                  </span>
+                  <span
+                    class="px-space-sm py-space-xs rounded bg-surface-container-high/80 backdrop-blur text-on-surface font-label-mono-xs text-label-mono-xs">
+                    LIVE STREAMING BACKHAUL
+                  </span>
+                </div>
+                <!-- Project Synopsis -->
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                  A high-stakes sub-zero commercial expedition capturing prototype extreme-weather endurance runs along
+                  treacherous glacier ridges. Executed with sub-second dual-pilot drone synchronicity, Apple Log 4K
+                  color workflows, and live multi-cam telemetry feeds.
+                </p>
+                <!-- Call to Action Anchors -->
+                <div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+                  <a class="inline-flex items-center justify-center gap-space-sm px-space-lg py-space-sm rounded bg-primary-container text-on-primary-container font-ui-action text-ui-action shadow-lg hover:bg-primary transition-all duration-200"
+                    href="#video-player">
+                    <span class="material-symbols-outlined text-lg"
+                      style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+                    <span class="">Watch Full Film</span>
+                  </a>
+                  <a class="inline-flex items-center justify-center gap-space-sm px-space-lg py-space-sm rounded bg-surface-container-high text-on-surface font-ui-action text-ui-action hover:bg-surface-bright transition-all"
+                    href="#gallery-section">
+                    <span class="material-symbols-outlined text-lg">photo_library</span>
+                    <span class="">View Stills &amp; BTS</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Technical Telemetry & Personnel Section -->
+        <section class="w-full px-margin-mobile md:px-margin-desktop py-space-2xl bg-surface">
+          <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+            <!-- Left Panel: Technical Breakdown Bento -->
+            <div class="lg:col-span-7 flex flex-col gap-space-lg">
+              <div class="flex flex-col gap-space-xs">
+                <span class="font-label-mono-xs text-label-mono-xs text-primary uppercase tracking-widest">//
+                  SPECIFICATION DATA SHEET</span>
+                <h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Mission Deliverables &amp;
+                  Deployment</h2>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                <!-- Deliverables Card -->
+                <div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-md shadow-sm">
+                  <div class="flex items-center gap-space-sm">
+                    <span class="material-symbols-outlined text-primary">videocam</span>
+                    <span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface font-semibold">Master
+                      Deliverables</span>
+                  </div>
+                  <ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+                    <li class="flex items-start gap-space-xs">
+                      <span class="material-symbols-outlined text-xs text-primary mt-1">check_circle</span>
+                      <span class="">4K 60p Apple Log Master Reel (Rec.2020 / ProRes 422 HQ)</span>
+                    </li>
+                    <li class="flex items-start gap-space-xs">
+                      <span class="material-symbols-outlined text-xs text-primary mt-1">check_circle</span>
+                      <span class="">48MP High-Bracketed Action &amp; Landscape RAW Stills</span>
+                    </li>
+                    <li class="flex items-start gap-space-xs">
+                      <span class="material-symbols-outlined text-xs text-primary mt-1">check_circle</span>
+                      <span class="">Low-latency SRT Live Stream Telemetry Broadcast</span>
+                    </li>
+                    <li class="flex items-start gap-space-xs">
+                      <span class="material-symbols-outlined text-xs text-primary mt-1">check_circle</span>
+                      <span class="">Sub-Zero Flight Log telemetry export (.CSV &amp; GPS KML)</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Equipment Deployed Card -->
+                <div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-md shadow-sm">
+                  <div class="flex items-center gap-space-sm">
+                    <span class="material-symbols-outlined text-secondary">flight_takeoff</span>
+                    <span class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface font-semibold">Rigging
+                      &amp; Gear Arsenal</span>
+                  </div>
+                  <ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+                    <li class="flex items-start gap-space-xs">
+                      <span class="material-symbols-outlined text-xs text-secondary mt-1">radar</span>
+                      <span class="">DJI Neo 2 Dual-Pilot FPV Synchronous Chase System</span>
+                    </li>
+                    <li class="flex items-start gap-space-xs">
+                      <span class="material-symbols-outlined text-xs text-secondary mt-1">camera</span>
+                      <span class="">iPhone 17 Pro Max in 3-Axis Heavy Gimbal Rig (Log pipeline)</span>
+                    </li>
+                    <li class="flex items-start gap-space-xs">
+                      <span class="material-symbols-outlined text-xs text-secondary mt-1">broadcast_on_personal</span>
+                      <span class="">Canon XC60 Broadcast Field Switcher + Bonded Cell Matrix</span>
+                    </li>
+                    <li class="flex items-start gap-space-xs">
+                      <span class="material-symbols-outlined text-xs text-secondary mt-1">battery_charging_full</span>
+                      <span class="">Sub-Zero Lipo Pre-Heating Inverters &amp; Field Station Hub</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Telemetry Performance Strip -->
+              <div
+                class="bg-surface-container-lowest p-space-md rounded-lg flex flex-wrap items-center justify-between gap-space-md">
+                <div class="flex items-center gap-space-sm">
+                  <span class="font-label-mono-xs text-label-mono-xs text-outline">TEMPERATURE</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-error font-bold">-14.2°C SUB-FREEZING</span>
+                </div>
+                <div class="flex items-center gap-space-sm">
+                  <span class="font-label-mono-xs text-label-mono-xs text-outline">GUST RESISTANCE</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-primary font-bold">18.4 KNOTS (FORCE 5)</span>
+                </div>
+                <div class="flex items-center gap-space-sm">
+                  <span class="font-label-mono-xs text-label-mono-xs text-outline">LATENCY TO BASE</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">42MS SRT BONDED</span>
+                </div>
+              </div>
+            </div>
+            <!-- Right Panel: Key Crew Leads & Client Portal Verification -->
+            <div class="lg:col-span-5 flex flex-col gap-space-lg">
+              <div class="flex flex-col gap-space-xs">
+                <span class="font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-widest">//
+                  EXPEDITION CREW ROSTER</span>
+                <h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Flight &amp; Cinema Leads</h2>
+              </div>
+              <div class="flex flex-col gap-space-sm">
+                <!-- Lead 1 -->
+                <div
+                  class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors shadow-sm">
+                  <div class="flex items-center gap-space-md min-w-0">
+                    <div
+                      class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold font-label-mono-sm">
+                      RR
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                      <span class="font-headline-sm text-headline-sm text-on-surface truncate">Rasith Rajapaksha</span>
+                      <span class="font-body-sm text-body-sm text-primary truncate">Chief Drone Pilot &amp; Aerial
+                        Cinematographer</span>
+                    </div>
+                  </div>
+                  <span
+                    class="px-space-xs py-0.5 rounded bg-surface-container-high font-label-mono-xs text-label-mono-xs text-on-surface-variant shrink-0">
+                    FAA PART 107
+                  </span>
+                </div>
+                <!-- Lead 2 -->
+                <div
+                  class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors shadow-sm">
+                  <div class="flex items-center gap-space-md min-w-0">
+                    <div
+                      class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary font-bold font-label-mono-sm">
+                      DE
+                    </div>
+                    <div class="flex flex-col min-w-0">
+                      <span class="font-headline-sm text-headline-sm text-on-surface truncate">Dineth Ekanayaka</span>
+                      <span class="font-body-sm text-body-sm text-secondary truncate">Chief Drone Pilot &amp; Aerial
+                        Cinematographer</span>
+                    </div>
+                  </div>
+                  <span
+                    class="px-space-xs py-0.5 rounded bg-surface-container-high font-label-mono-xs text-label-mono-xs text-on-surface-variant shrink-0">
+                    HIGH-ALT EXPERT
+                  </span>
+                </div>
+                <!-- Lead 3 -->
+                <div
+                  class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between gap-space-md hover:bg-surface-container transition-colors shadow-sm">
+                  <div class="flex items-center gap-space-md min-w-0">
+                    <img
+                      src="images/sachith-malshan.jpg"
+                      alt="Sachith Malshan" class="w-12 h-12 rounded-full object-cover shrink-0">
+                    <div class="flex flex-col min-w-0">
+                      <span class="font-headline-sm text-headline-sm text-on-surface truncate">Sachith Malshan</span>
+                      <span class="font-body-sm text-body-sm text-tertiary truncate">Lead Cinematographer &amp; Apple
+                        Log Colorist / Stream Director</span>
+                    </div>
+                  </div>
+                  <span
+                    class="px-space-xs py-0.5 rounded bg-surface-container-high font-label-mono-xs text-label-mono-xs text-on-surface-variant shrink-0">
+                    COLORIST / DIT
+                  </span>
+                </div>
+              </div>
+              <!-- CMS Verified Badge Container -->
+              <div class="p-space-md rounded-lg bg-surface-container-lowest flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-primary text-base">verified</span>
+                <div class="flex flex-col">
+                  <span
+                    class="font-label-mono-xs text-label-mono-xs text-primary uppercase font-bold tracking-wider">[CMS
+                    Verified Archive]</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant">Dynamic Project Record • Managed via
+                    Sky Bound Client Admin Console</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Dedicated Video Showcase Section -->
+        <section class="w-full px-margin-mobile md:px-margin-desktop py-space-2xl bg-surface-container-lowest"
+          id="video-player">
+          <div class="flex flex-col gap-space-md pb-space-lg">
+            <div class="flex items-center justify-between flex-wrap gap-space-sm">
+              <div>
+                <span class="font-label-mono-xs text-label-mono-xs text-primary uppercase tracking-widest">01 //
+                  CINEMATIC FILM &amp; MOTION MASTER</span>
+                <h2 class="font-headline-xl text-headline-xl uppercase text-on-surface">The Official Cut</h2>
+              </div>
+              <div class="flex items-center gap-space-xs">
+                <span
+                  class="px-space-sm py-1 rounded bg-surface-container-high font-label-mono-xs text-label-mono-xs text-primary uppercase">
+                  2.39:1 CINEMATIC ANAMORPHIC
+                </span>
+                <span
+                  class="px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-mono-xs text-label-mono-xs font-bold uppercase">
+                  4K UHD MASTER
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Custom Cinema Player Component -->
+          <div class="relative w-full rounded-2xl overflow-hidden bg-surface-container-low shadow-2xl group">
+            <!-- Background Video Poster -->
+            <div class="relative w-full aspect-video md:aspect-[21/9] bg-cover bg-center"
+              data-alt="Expedition film frame of prototype electric sportscar drifting on snowy high mountain road in Alps at dawn, surrounded by vertical ice peaks and chased closely by a cinematography drone."
+              style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDFxFR56q80vunI2BjUK2sBnMBhbD4oyJeu0jlhMWfK0voalbDeGv9CWrJoI8zXC_KA6EuVwc61FOQ0ak1YbdSF7IOONFVSZFiYSk4YxUoohxsMwgRKU1ZSKRkW58kdxGL5WMsyJR98z6SD5Hh3vA4yHvA53vo7J4VOSZf8MSmw6RpozSsRF3B6jCYVasLg1rw33CZbJJybmTxu5ldSz51WoG8wvSFdcwDLsi5SiMJAOfBTNMB4MP71xA&quot;);">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/20 to-transparent">
+              </div>
+              <div class="absolute inset-0 bg-surface-dim/30 backdrop-blur-[1px]"></div>
+            </div>
+            <!-- Center Play Button with Bloom -->
+            <button aria-label="Play Video"
+              class="absolute inset-0 m-auto w-20 h-20 rounded-full bg-primary/20 backdrop-blur-xl flex items-center justify-center text-primary-container group-hover:scale-110 transition-transform shadow-[0_0_40px_rgba(0,194,255,0.4)] cursor-pointer"
+              id="main-play-btn">
+              <span
+                class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+                <span class="material-symbols-outlined text-3xl"
+                  style="font-variation-settings: &quot;FILL&quot; 1;">play_arrow</span>
+              </span>
+            </button>
+            <!-- Player HUD Top Corner Indicators -->
+            <div class="absolute top-4 left-4 right-4 flex justify-between items-center pointer-events-none">
+              <span
+                class="px-space-sm py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-label-mono-xs text-label-mono-xs text-primary">
+                APPLE PRORES 422 HQ • 24.000 FPS
+              </span>
+              <span
+                class="px-space-sm py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-label-mono-xs text-label-mono-xs text-on-surface">
+                AUDIO: 24-BIT 48KHZ STEREO
+              </span>
+            </div>
+            <!-- Scrubber & Controls Bar Bottom -->
+            <div
+              class="absolute bottom-0 left-0 right-0 p-space-md md:p-space-lg flex flex-col gap-space-xs bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/90 to-transparent">
+              <!-- Interactive Progress Scrubber -->
+              <div
+                class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden relative cursor-pointer group/scrub">
+                <div class="h-full bg-primary-container w-[62%] rounded-full relative">
+                  <span
+                    class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-on-primary-container rounded-full shadow-md scale-0 group-hover/scrub:scale-100 transition-transform"></span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs">
+                <div class="flex items-center gap-space-md">
+                  <button class="text-on-surface hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-xl"
+                      style="font-variation-settings: &quot;FILL&quot; 1;">pause</span>
+                  </button>
+                  <div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs text-on-surface">
+                    <span class="text-primary font-bold">04:18</span>
+                    <span class="text-outline-variant">/</span>
+                    <span class="text-on-surface-variant">06:45</span>
+                  </div>
+                  <!-- Audio Waveform Graphic Mock -->
+                  <div class="hidden sm:flex items-center gap-0.5 h-4 text-primary">
+                    <span class="w-0.5 h-2 bg-primary rounded-full animate-pulse"></span>
+                    <span class="w-0.5 h-3.5 bg-primary rounded-full"></span>
+                    <span class="w-0.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
+                    <span class="w-0.5 h-4 bg-primary-container rounded-full"></span>
+                    <span class="w-0.5 h-2.5 bg-primary rounded-full"></span>
+                    <span class="w-0.5 h-1 bg-secondary rounded-full"></span>
+                    <span class="w-0.5 h-3 bg-primary rounded-full"></span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-space-md">
+                  <span class="font-label-mono-xs text-label-mono-xs text-tertiary hidden md:inline-block">DCI 4K COLOR
+                    GRADE: REC.2020</span>
+                  <button class="text-on-surface-variant hover:text-on-surface transition-colors">
+                    <span class="material-symbols-outlined text-lg">volume_up</span>
+                  </button>
+                  <button class="text-on-surface-variant hover:text-on-surface transition-colors">
+                    <span class="material-symbols-outlined text-lg">settings</span>
+                  </button>
+                  <button class="text-on-surface-variant hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-lg">fullscreen</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Aerial Drone Ops & Telemetry Section -->
+        <section class="w-full px-margin-mobile md:px-margin-desktop py-space-2xl bg-surface">
+          <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+            <!-- Drone Visual Frame with Telemetry Vector HUD -->
+            <div class="lg:col-span-7 relative rounded-xl overflow-hidden bg-surface-container-low shadow-xl">
+              <div class="relative w-full aspect-[16/10] bg-cover bg-center"
+                data-alt="High altitude panorama of dramatic snow covered jagged glacier peaks, ice crevices, and mountain ridges in Chamonix, captured by high altitude aerial drone camera with vast atmospheric depth."
+                style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuALGNVVKQlu5bIaEueLoJCl9IbZpqyf0iR4ld79lET3bSqRlAj2g34KspmoYKa8VfaRn--cMW1vI9KHNchU0DF-XXwFlXGE6NrDjZGTw-klDxcK1b60a8FUUdKXQQoyYI-wRazI22hAOPRoB8oG7Jj93qCoGThyOqlfZUuQqdbIxFYIKvx2xYfJXVLZjEQsV-iKGfVo-ccKGTa6JWLV_6np6jZa1AMy3k2LmDClkMyQDdXd3Cd8XYBjtQ&quot;);">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 via-transparent to-surface-dim/40">
+                </div>
+              </div>
+              <!-- Overlaid Tactical Grid Vectors -->
+              <div class="absolute inset-0 p-space-lg flex flex-col justify-between pointer-events-none">
+                <div class="flex justify-between items-start">
+                  <div
+                    class="p-space-xs rounded bg-surface-container-lowest/80 backdrop-blur font-label-mono-xs text-label-mono-xs text-primary flex flex-col gap-0.5">
+                    <span class="">DRONE: DJI NEO 2 EXPEDITION RIG</span>
+                    <span class="text-on-surface-variant">FLIGHT MODE: MANUAL DUAL-LINK</span>
+                  </div>
+                  <div
+                    class="p-space-xs rounded bg-surface-container-lowest/80 backdrop-blur font-label-mono-xs text-label-mono-xs text-right">
+                    <span class="text-secondary font-bold">ALT 3,480M MSL</span>
+                    <span class="text-outline-variant block">WIND: 18 KTS NW</span>
+                  </div>
+                </div>
+                <!-- Bottom Telemetry Readout -->
+                <div class="flex justify-between items-end">
+                  <div
+                    class="flex items-center gap-space-xs bg-surface-container-lowest/85 backdrop-blur px-space-sm py-1 rounded font-label-mono-xs text-label-mono-xs">
+                    <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                    <span class="">SYNCHRONICITY: 99.8%</span>
+                    <span class="text-outline-variant">•</span>
+                    <span class="text-tertiary">CEILING 120M AGL VERIFIED</span>
+                  </div>
+                  <span
+                    class="font-label-mono-xs text-label-mono-xs text-outline bg-surface-container-lowest/80 backdrop-blur px-space-xs py-0.5 rounded">
+                    CH-04 DUAL RADIO 5.8GHZ
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Drone Specs Description & Lead Pilot Brief -->
+            <div class="lg:col-span-5 flex flex-col gap-space-lg">
+              <div class="flex flex-col gap-space-xs">
+                <span class="font-label-mono-xs text-label-mono-xs text-primary uppercase tracking-widest">02 // AERIAL
+                  CINEMATOGRAPHY</span>
+                <h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Dual-Pilot Ridge Pursuits</h2>
+              </div>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Navigating glacial crevasses and knife-edge serrations at 3,480m elevation required our dual-pilot
+                operational protocol. Pilot 1 managed high-velocity proximity trajectories at speeds exceeding 90 km/h,
+                while Pilot 2 operated camera tilt, exposure tracking, and framing locks in real-time.
+              </p>
+              <!-- Technical Telemetry Metrics Bars -->
+              <div class="flex flex-col gap-space-md">
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex justify-between font-label-mono-xs text-label-mono-xs">
+                    <span class="text-on-surface">High-Velocity Tracking (Max Speed)</span>
+                    <span class="text-primary font-bold">94 KM/H</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+                    <div class="w-[88%] h-full bg-primary-container rounded-full"></div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex justify-between font-label-mono-xs text-label-mono-xs">
+                    <span class="text-on-surface">Sub-Zero Battery Efficiency</span>
+                    <span class="text-tertiary font-bold">84% NORMALIZED</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+                    <div class="w-[84%] h-full bg-tertiary-container rounded-full"></div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex justify-between font-label-mono-xs text-label-mono-xs">
+                    <span class="text-on-surface">RF Link Integrity (Dual Encrypted)</span>
+                    <span class="text-secondary font-bold">100% NO DROPOUTS</span>
+                  </div>
+                  <div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+                    <div class="w-full h-full bg-secondary-container rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-space-md pt-space-xs">
+                <div class="flex flex-col">
+                  <span class="font-label-mono-xs text-label-mono-xs text-outline">PRIMARY PILOTS</span>
+                  <span class="font-body-sm text-body-sm text-on-surface font-semibold">Rasith Rajapaksha &amp; Dineth
+                    Ekanayaka</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Modern Masonry Photo Gallery Section -->
+        <section class="w-full px-margin-mobile md:px-margin-desktop py-space-2xl bg-surface-container-lowest"
+          id="gallery-section">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-xl">
+            <div class="flex flex-col gap-space-xs">
+              <span class="font-label-mono-xs text-label-mono-xs text-primary uppercase tracking-widest">03 //
+                HIGH-RESOLUTION STILLS &amp; BTS ARCHIVE</span>
+              <h2 class="font-headline-xl text-headline-xl uppercase text-on-surface">Expedition Gallery</h2>
+            </div>
+            <div class="flex items-center gap-space-xs flex-wrap">
+              <button
+                class="gallery-filter px-space-md py-space-xs rounded bg-primary-container text-on-primary-container font-label-mono-xs text-label-mono-xs uppercase font-semibold"
+                data-filter="all">All Stills</button>
+              <button
+                class="gallery-filter px-space-md py-space-xs rounded bg-surface-container-high text-on-surface-variant font-label-mono-xs text-label-mono-xs uppercase hover:text-on-surface"
+                data-filter="aerial">Aerials</button>
+              <button
+                class="gallery-filter px-space-md py-space-xs rounded bg-surface-container-high text-on-surface-variant font-label-mono-xs text-label-mono-xs uppercase hover:text-on-surface"
+                data-filter="bts">Crew &amp; BTS</button>
+              <button
+                class="gallery-filter px-space-md py-space-xs rounded bg-surface-container-high text-on-surface-variant font-label-mono-xs text-label-mono-xs uppercase hover:text-on-surface"
+                data-filter="action">Action Cuts</button>
+            </div>
+          </div>
+          <!-- Asymmetric Masonry Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+            <!-- Item 1: Wide High-Alpine Crevasse Plate (Span 8) -->
+            <div
+              class="gallery-item md:col-span-8 group relative rounded-xl overflow-hidden bg-surface-container-low cursor-pointer aspect-[16/9]"
+              data-caption="Glacier Crevasse Descent — 3,480m MSL" data-category="aerial"
+              data-meta="DJI Neo 2 • 24mm • f/2.8 • 1/1200s • ISO 100">
+              <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                data-alt="High altitude wide aerial of fractured alpine glacier crevasses, deep blue ice fissures, and jagged snow formations in Chamonix France under dramatic morning sunlight."
+                style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBB7ZUUPljxTCcLENR6E5WBcIAZZbf_p-GMWvg8ex9P9ApqY650qv6D5p9c0cR26PYCXmht9gEmmTZqNo6kDtnTzae7ZXSZB43OygjYtRH0_nudzLdKkLaYtiIV2xZUQHY4loZNyHhvNWkUSe8a5z40-xPgUjeAoHbi9rNM0RZyk_K41QCDioLpyDYINsV-ApCS9WPhqJe7fAfb_tCRGD-zQEqzvDYBS5QAPAeRV70nUFM0DzD7_l__tQ&quot;);">
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-space-md">
+                <span class="font-label-mono-xs text-label-mono-xs text-primary">AERIAL STABLE CAPTURE</span>
+                <span class="font-headline-sm text-headline-sm text-on-surface">Glacier Crevasse Descent</span>
+                <span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">DJI Neo 2 • 24mm • ƒ/2.8 •
+                  1/1200s • ISO 100</span>
+              </div>
+              <span
+                class="absolute top-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-label-mono-xs text-label-mono-xs text-primary">16:9
+                48MP</span>
+            </div>
+            <!-- Item 2: High Alpine FPV Chase Action (Span 4) -->
+            <div
+              class="gallery-item md:col-span-4 group relative rounded-xl overflow-hidden bg-surface-container-low cursor-pointer aspect-square md:aspect-auto"
+              data-caption="High Ridge FPV Intercept at 94 km/h" data-category="action"
+              data-meta="DJI FPV • 180° Shutter • 4K 60fps ProRes • Apple Log">
+              <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                data-alt="Close proximity FPV drone tracking an orange jacketed snowboarder carving down a razor-sharp icy knife-edge mountain ridge in Chamonix French Alps at sunset with telemetry viewfinder overlay."
+                style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuB590OLaXwGizNy2IIiSTknlG8CHHl6Aq-giys3sZWdxckXl-qdzRrWgoRWIkFm2vvzblyMBP4xrJxa0JzAgpaMs3HnZq4IXYualuRL6Rjk2uGfkpUyoHkhSXEgTWp-fV2I0P67noWIeMl0gwOTiLTKGZk7L0e0GAMpl5lkF9Hzpmzvya2RQxzuqLt6jMMcO_Ky4YhZ1OeGsyRwUK1keY47DXJM-ZJIsalHpeeY5FaZQsCeqd3fWAF0CA&quot;);">
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-space-md">
+                <span class="font-label-mono-xs text-label-mono-xs text-secondary">PROXIMITY FPV</span>
+                <span class="font-headline-sm text-headline-sm text-on-surface">Ridge Intercept at 94 km/h</span>
+                <span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">4K 60p Apple Log Master
+                  Frame</span>
+              </div>
+              <span
+                class="absolute top-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-label-mono-xs text-label-mono-xs text-secondary">ACTION
+                CUT</span>
+            </div>
+            <!-- Item 3: Crew Staging Area & Telemetry Monitors BTS (Span 6) -->
+            <div
+              class="gallery-item md:col-span-6 group relative rounded-xl overflow-hidden bg-surface-container-low cursor-pointer aspect-[16/10]"
+              data-caption="High Alpine Drone Rigging &amp; Flight Ops Staging" data-category="bts"
+              data-meta="iPhone 17 Pro Max • 3-Axis Gimbal • f/1.78 • 48MP RAW">
+              <img
+                alt="Behind the scenes film crew staging area in high alpine snow, drone battery charging hub and flight telemetry monitors"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1UMhxfZBY0j9MwPr364AH7t2aCiMTpKfPFCSxJi1-DG2E-iXiZxNc8KlsS9x-AdvWMvUl8pzJG2MQ8EJJ9J_keZWhC4wAQVVT0FoJoiM4_oLAjtC7itNOL25tgemWxz0hsOPhT2USC4cTaN_9w2vwjf1y180-YJ56YZsseBUOmaGTrNWlT9zoeOAi_g_PlDyTplrF4NMsu88BuMT-bI3b2BHW62fYHZA_BbIHTPIDR_l48FZvBnDbsrn_6J">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-space-md">
+                <span class="font-label-mono-xs text-label-mono-xs text-tertiary">BTS FLIGHT OPS</span>
+                <span class="font-headline-sm text-headline-sm text-on-surface">Sub-Zero Field Rigging Hub</span>
+                <span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Prepping carbon fiber props
+                  &amp; telemetry links</span>
+              </div>
+              <span
+                class="absolute top-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-label-mono-xs text-label-mono-xs text-tertiary">BTS
+                STILL</span>
+            </div>
+            <!-- Item 4: Sunset Heavy-Lift Ridge Operations (Span 6) -->
+            <div
+              class="gallery-item md:col-span-6 group relative rounded-xl overflow-hidden bg-surface-container-low cursor-pointer aspect-[16/10]"
+              data-caption="Lead Pilot Monitoring Drone Telemetry on Mountaintop" data-category="bts"
+              data-meta="Canon XC60 Feed • 35mm Equivalent • 1/250s">
+              <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                data-alt="Two professional drone cinematographers on a snowy Alpine peak at golden sunset holding wireless video monitor and prepping a heavy-lift cinema drone on an icy launch pad."
+                style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBbSUAtvxXaOndKqMYfMJu5XAGFvoEbk7tV0PmU6E3ocBiPXPDDO4W8kvqMkF9yOZlc-VwINA3VpdJKf_1vWmR_Uf1wLGU2nGjE7lnGOLEuTBvuPSpPqCBHCZhT-tqmykwl6AAPsrB39VlWXulFSrGMCU0l-goa_2FPWjn_eM56TLNJkK4fZLUuKV8cwFCAPqGfY7ie9Sg0H0jM1WMFPx7hXUAQqtpkJtfE97A2hXq8NkfwUFOlxdPEYg&quot;);">
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-surface-dim via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-space-md">
+                <span class="font-label-mono-xs text-label-mono-xs text-primary">PRODUCTION UNIT</span>
+                <span class="font-headline-sm text-headline-sm text-on-surface">Sunset Telemetry Uplink</span>
+                <span class="font-label-mono-xs text-label-mono-xs text-on-surface-variant">Pilots Rasith &amp; Dineth
+                  during final sortie</span>
+              </div>
+              <span
+                class="absolute top-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur font-label-mono-xs text-label-mono-xs text-primary">CREW
+                ARCHIVE</span>
+            </div>
+          </div>
+        </section>
+        <!-- Built-in Lightbox Viewer Modal -->
+        <div
+          class="fixed inset-0 z-50 hidden bg-surface-dim/95 backdrop-blur-2xl flex items-center justify-center p-space-md"
+          id="lightbox-modal">
+          <button aria-label="Close Lightbox"
+            class="absolute top-6 right-6 w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:text-primary transition-colors cursor-pointer"
+            id="lightbox-close">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          <button aria-label="Previous Image"
+            class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-surface-container-high/80 flex items-center justify-center text-on-surface hover:text-primary transition-colors cursor-pointer"
+            id="lightbox-prev">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button aria-label="Next Image"
+            class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-surface-container-high/80 flex items-center justify-center text-on-surface hover:text-primary transition-colors cursor-pointer"
+            id="lightbox-next">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+          <div class="max-w-5xl w-full max-h-[85vh] flex flex-col items-center gap-space-md">
+            <div
+              class="w-full h-[65vh] rounded-xl overflow-hidden bg-surface-container-low flex items-center justify-center relative"
+              id="lightbox-img-box">
+              <img alt="High resolution inspection" class="w-full h-full object-contain" id="lightbox-img" src="">
+            </div>
+            <div class="w-full flex flex-wrap justify-between items-center px-space-sm">
+              <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-on-surface" id="lightbox-caption">Image
+                  Caption</span>
+                <span class="font-label-mono-xs text-label-mono-xs text-primary" id="lightbox-meta">Camera
+                  Metadata</span>
+              </div>
+              <div class="flex items-center gap-space-xs">
+                <span
+                  class="px-space-sm py-1 rounded bg-surface-container font-label-mono-xs text-label-mono-xs text-secondary">
+                  OFFICIAL MISSION ARCHIVE
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Live-Stream & Broadcast Section -->
+        <section class="w-full px-margin-mobile md:px-margin-desktop py-space-2xl bg-surface">
+          <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+            <div class="lg:col-span-5 flex flex-col gap-space-md">
+              <span class="font-label-mono-xs text-label-mono-xs text-tertiary uppercase tracking-widest">04 //
+                MULTI-CAM LIVE STREAMING (CANON XC60)</span>
+              <h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Bonded Multi-Angle Broadcast</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Simultaneous multi-cam backhaul routed through our mobile cellular uplink station directly into global
+                feeds on YouTube Live and Facebook Live. Synchronized timecode genlock across ground cameras and aerial
+                FPV telemetry ensured seamless live switching at sub-second latency.
+              </p>
+              <!-- Live Telemetry Status Grid -->
+              <div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+                <div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+                  <span class="font-label-mono-xs text-label-mono-xs text-outline">STREAM STATUS</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-primary font-bold flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+                    BROADCAST ACTIVE
+                  </span>
+                </div>
+                <div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+                  <span class="font-label-mono-xs text-label-mono-xs text-outline">DROPPED PACKETS</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary font-bold">0.00% (STABLE)</span>
+                </div>
+                <div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+                  <span class="font-label-mono-xs text-label-mono-xs text-outline">DESTINATIONS</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold">YT LIVE • FB
+                    LIVE</span>
+                </div>
+                <div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+                  <span class="font-label-mono-xs text-label-mono-xs text-outline">BITRATE ENCODE</span>
+                  <span class="font-label-mono-sm text-label-mono-sm text-tertiary font-bold">28 MBPS CBR (SRT)</span>
+                </div>
+              </div>
+            </div>
+            <!-- Switcher Matrix UI Visual -->
+            <div
+              class="lg:col-span-7 bg-surface-container-lowest p-space-md md:p-space-lg rounded-2xl shadow-xl flex flex-col gap-space-md">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-space-xs font-label-mono-xs text-label-mono-xs">
+                  <span class="px-space-xs py-0.5 rounded bg-error/20 text-error font-bold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                    PGM OUT
+                  </span>
+                  <span class="text-on-surface font-semibold">CANON XC60 MULTI-CAM MATRIX</span>
+                </div>
+                <span class="font-label-mono-xs text-label-mono-xs text-outline">GENLOCK SYNC: OK</span>
+              </div>
+              <!-- 4-Up Live Camera Feeds Grid -->
+              <div class="grid grid-cols-2 gap-space-xs">
+                <!-- Feed 1: PGM Active -->
+                <div
+                  class="relative aspect-video rounded-lg overflow-hidden bg-surface-container-high ring-2 ring-primary-container">
+                  <div class="w-full h-full bg-cover bg-center"
+                    data-alt="Camera monitor showing live alpine chase footage of snowboarder on ridge."
+                    style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuC7etp9Gz2X7tT_p2lMQlR497HhrxFkIX_LyBVuwngo0kgIFdLy-JXN9Qq_TCXR5FJfr1zc7_v4cmfGK9Z9qfvLAQG4dEPPYtYX-nAL5OgDZOXhNcah-Ga5oOAepNFP_kVOYkfiFny56eYBkt8pYzRhUKbWwkpyz27u-9AyGL4257gUSrCzGsZva71TqcIq5qtvO_wJJcDYUhmToiApDVWO1T_fFpLNvZjTnELR4AfVjTTVlGJXeHo4qA&quot;);">
+                  </div>
+                  <div
+                    class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 font-label-mono-xs text-label-mono-xs text-primary font-bold">
+                    CAM 01 [FPV CHASE]
+                  </div>
+                  <span
+                    class="absolute bottom-2 right-2 text-[10px] font-mono text-error font-bold px-1 bg-surface-container-lowest/90 rounded">LIVE
+                    PGM</span>
+                </div>
+                <!-- Feed 2: Ground Rig -->
+                <div
+                  class="relative aspect-video rounded-lg overflow-hidden bg-surface-container-high opacity-80 hover:opacity-100 transition-opacity">
+                  <div class="w-full h-full bg-cover bg-center"
+                    data-alt="Ground crew operator filming with motorized gimbal setup on snowy mountain pass."
+                    style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAlGNuwJh-pdEAfU9tof1o-DI8nSelAJXX6OPrY3qGI2W50P5nlNnqcfRV2DRkPvj-IKv3NvG2KiqqgxHLFrveNiQ7hZywU3icaisUeG1mcXwTxjuLODYGrc2jq7C-A5shT5oRFOBDy0Me0lFh6LDRD1cLWuTrHX7bE3X9PgBMwwTC2qzZa-X19d1fE3J4SvteIPn-CPoc8Wr4ZY9ulnaoIqLbFcETYfyZ3RqdnmyMZXVjTLJbrVzFGWw&quot;);">
+                  </div>
+                  <div
+                    class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 font-label-mono-xs text-label-mono-xs text-on-surface">
+                    CAM 02 [GIMBAL RIG]
+                  </div>
+                </div>
+                <!-- Feed 3: High Angle Drone -->
+                <div
+                  class="relative aspect-video rounded-lg overflow-hidden bg-surface-container-high opacity-80 hover:opacity-100 transition-opacity">
+                  <div class="w-full h-full bg-cover bg-center"
+                    data-alt="High altitude wide panoramic drone view over jagged snow covered mountain peaks in French Alps."
+                    style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBHZNZxqNHZ_gxBhHT2ngw7-R0i5xfYLcLoL9ScKEcTkYjUvVCkUQ0KxDcPrZ3cEwqCyK9xCgdfWNiTHG0WHZCov1vXcN97XInDaEqMbXXPpctlnzZgbBLBN0r1obOpU_bwzVnS3dPaWbaROaHX1keaspJ9Vc2J3V9Xwyj0zTUf37vS11bul_3zNZip0mGzgLaoGaKL31b5V0sSQbDiyMK3LlGTWRf13dm82ckIGoMubYNPhdmcOllo4g&quot;);">
+                  </div>
+                  <div
+                    class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 font-label-mono-xs text-label-mono-xs text-on-surface">
+                    CAM 03 [AERIAL TOP-DOWN]
+                  </div>
+                </div>
+                <!-- Feed 4: Base Staging Telemetry -->
+                <div
+                  class="relative aspect-video rounded-lg overflow-hidden bg-surface-container-high opacity-80 hover:opacity-100 transition-opacity">
+                  <img alt="Base staging area telemetry monitors in high snow" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1UMhxfZBY0j9MwPr364AH7t2aCiMTpKfPFCSxJi1-DG2E-iXiZxNc8KlsS9x-AdvWMvUl8pzJG2MQ8EJJ9J_keZWhC4wAQVVT0FoJoiM4_oLAjtC7itNOL25tgemWxz0hsOPhT2USC4cTaN_9w2vwjf1y180-YJ56YZsseBUOmaGTrNWlT9zoeOAi_g_PlDyTplrF4NMsu88BuMT-bI3b2BHW62fYHZA_BbIHTPIDR_l48FZvBnDbsrn_6J">
+                  <div
+                    class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-surface-container-lowest/80 font-label-mono-xs text-label-mono-xs text-on-surface">
+                    CAM 04 [BASE CAMP OPS]
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Next Project Card & Mission Launch Action Strip -->
+        <section class="w-full px-margin-mobile md:px-margin-desktop py-space-2xl bg-surface-container-lowest">
+          <div class="w-full flex flex-col gap-space-2xl">
+            <!-- Next Project Preview Card -->
+            <div
+              class="w-full p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg shadow-xl group">
+              <div class="flex flex-col gap-space-xs">
+                <span class="font-label-mono-xs text-label-mono-xs text-secondary uppercase tracking-widest">// NEXT
+                  PROJECT IN ARCHIVE</span>
+                <h3
+                  class="font-headline-lg text-headline-lg uppercase text-on-surface group-hover:text-primary transition-colors">
+                  Velox Hypercar Campaign</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+                  Trackside commercial videography and high-g pursuit filming featuring iPhone 17 Pro Max 3-Axis
+                  Motorized Gimbal rigging and telemetry integration.
+                </p>
+              </div>
+              <a class="inline-flex items-center gap-space-sm px-space-lg py-space-sm rounded bg-surface-container-high text-primary hover:bg-primary-container hover:text-on-primary-container transition-all font-ui-action text-ui-action shrink-0 shadow"
+                href="#">
+                <span class="">Explore Case Study</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+            <!-- High-Impact Dispatch Call-to-Action Strip -->
+            <div
+              class="w-full p-space-xl md:p-space-2xl rounded-2xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-low flex flex-col items-center text-center gap-space-md shadow-2xl">
+              <div class="flex items-center gap-space-xs">
+                <img alt="Sky Bound Logo Icon" class="w-6 h-6 rounded-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBRxiYajrJ7SLe5lfhZU9S369Dc94DEln083LZPoxFESaNceYRE_8slb2dPNG3MmCXqNEyIuCds2mEkaVCKwARShEcjVWodbO7De63WDBeRF84BOHrlDNC2MQikOBxRCxifzN8s6P4sV98tqnNUf5ZYaTmuXZVMBEVSyFb42Dfas3OG_q5whRVqPJS7QHAoL5-mLPAzox4RiY5aJ171Lj_zothUtjhDuiAIFdfFmi9RjacY3UtDiz938nAUacyPuloEUs">
+                <span class="font-label-mono-xs text-label-mono-xs text-primary font-bold uppercase tracking-widest">SKY
+                  BOUND RAPID DISPATCH</span>
+              </div>
+              <h2 class="font-headline-xl text-headline-xl uppercase text-on-surface max-w-3xl">
+                Ready for Your Next High-Impact Mission?
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                From high-alpine drone cinematography to live multi-cam streaming broadcasts anywhere across the globe,
+                our certified pilots and cinema leads are ready for deployment.
+              </p>
+              <div class="flex flex-wrap items-center justify-center gap-space-md pt-space-sm">
+                <a class="inline-flex items-center justify-center gap-space-sm px-space-xl py-space-sm rounded bg-primary-container text-on-primary-container font-ui-action text-ui-action hover:bg-primary transition-all shadow-lg"
+                  href="#">
+                  <span class="material-symbols-outlined text-lg">flight_takeoff</span>
+                  <span class="">Initiate Production Brief</span>
+                </a>
+                <a class="inline-flex items-center justify-center gap-space-sm px-space-xl py-space-sm rounded bg-surface-container-lowest text-on-surface hover:text-secondary transition-all font-ui-action text-ui-action shadow"
+                  href="#">
+                  <span class="material-symbols-outlined text-lg">chat</span>
+                  <span class="">Instant WhatsApp Dispatch</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Interactive Lightbox & Micro-interaction Logic -->
+        <script>
+          (function() {
+            const filterBtns = document.querySelectorAll('.gallery-filter');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const modal = document.getElementById('lightbox-modal');
+            const modalImg = document.getElementById('lightbox-img');
+            const modalCaption = document.getElementById('lightbox-caption');
+            const modalMeta = document.getElementById('lightbox-meta');
+            const closeBtn = document.getElementById('lightbox-close');
+            const prevBtn = document.getElementById('lightbox-prev');
+            const nextBtn = document.getElementById('lightbox-next');
+            let activeIndex = 0;
+            const imagesData = [];
+            // Collect items data
+            galleryItems.forEach((item, index) => {
+              const bgDiv = item.querySelector('div[style*="background-image"]');
+              const imgEl = item.querySelector('img');
+              let src = '';
+              if (bgDiv) {
+                const match = bgDiv.style.backgroundImage.match(/url\(["']?([^"']*)["']?\)/);
+                src = match ? match[1] : 'placeholder';
+              } else if (imgEl) {
+                src = imgEl.src;
+              }
+              imagesData.push({
+                src: src,
+                caption: item.getAttribute('data-caption') || 'Alpine Expedition Still',
+                meta: item.getAttribute('data-meta') || 'Sky Bound Flight Camera',
+                category: item.getAttribute('data-category') || 'all'
+              });
+              item.addEventListener('click', () => {
+                openLightbox(index);
+              });
+            });
+
+            function openLightbox(index) {
+              activeIndex = index;
+              const current = imagesData[activeIndex];
+              if (current) {
+                modalImg.src = current.src;
+                modalCaption.textContent = current.caption;
+                modalMeta.textContent = current.meta;
+                modal.classList.remove('hidden');
+              }
+            }
+
+            function closeLightbox() {
+              modal.classList.add('hidden');
+            }
+
+            function showNext() {
+              activeIndex = (activeIndex + 1) % imagesData.length;
+              openLightbox(activeIndex);
+            }
+
+            function showPrev() {
+              activeIndex = (activeIndex - 1 + imagesData.length) % imagesData.length;
+              openLightbox(activeIndex);
+            }
+            if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+            if (nextBtn) nextBtn.addEventListener('click', showNext);
+            if (prevBtn) prevBtn.addEventListener('click', showPrev);
+            // Keyboard navigation
+            window.addEventListener('keydown', (e) => {
+              if (!modal.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') showNext();
+                if (e.key === 'ArrowLeft') showPrev();
+              }
+            });
+            // Filter category buttons
+            filterBtns.forEach((btn) => {
+              btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                filterBtns.forEach(b => {
+                  b.classList.remove('bg-primary-container', 'text-on-primary-container');
+                  b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+                });
+                btn.classList.add('bg-primary-container', 'text-on-primary-container');
+                btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+                galleryItems.forEach(item => {
+                  const cat = item.getAttribute('data-category');
+                  if (filter === 'all' || cat === filter) {
+                    item.style.display = 'block';
+                  } else {
+                    item.style.display = 'none';
+                  }
+                });
+              });
+            });
+            // Play button smooth scroll trigger
+            const playBtn = document.getElementById('main-play-btn');
+            if (playBtn) {
+              playBtn.addEventListener('click', () => {
+                playBtn.classList.toggle('scale-95');
+              });
+            }
+          })();
+        </script>
+      </div>
+    </main>
+    <footer class="w-full bg-surface-container-lowest pt-space-2xl pb-space-xl shadow-[0_-1px_12px_rgba(0,0,0,0.5)]">
+      <div class="w-full px-margin-desktop">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-desktop pb-space-2xl">
+          <div class="flex flex-col gap-space-md">
+            <div class="flex items-center gap-space-sm"><img alt="Sky Bound Production Logo"
+                class="h-8 w-8 rounded-full object-contain"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAC2exQGSbjgGCUn80fBHeXDPaRpnyitJlmOFE_9KTfakGQu5vit5NGS0EuUJaD93gRnK4GCTuhRG_kHvAB929axpbRnlYUY6SKnj-9BLkt5w9KMQ_ktizMuK-DjjiSTww2p8pGshVR9GBwWL9ReI5-M-cUAF2cRwup-gCCTc0AMDSrYOOxOM9XAfasUpPDQr_r7eFOXCxpnfGqLiZQJvLEaqjK537CRCvDLJEoWzu5c1x_YXIhgKNenfI7sKpLP4isLI"><span
+                class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface">Sky Bound</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">High-end cinematic visuals, aerial
+              drone cinematography, and live dynamic multi-cam broadcasts engineered for bold brands worldwide.</p>
+            <div class="flex items-center gap-space-xs"><span
+                class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-high text-primary font-label-mono-xs text-label-mono-xs uppercase tracking-widest"><span
+                  class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>FAA Part 107 Certified</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-space-sm"><span
+              class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface">Aerial &amp; Cinema</span><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">FPV Cinematic Pursuit</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Heavy-Lift Drone Rigging</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Multi-Cam Live Switcher</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Color Grading &amp; Master HDR</a></div>
+          <div class="flex flex-col gap-space-sm"><span
+              class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface">Production Hub</span><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Showreel 2024 / 2025</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Raw Footage Review</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+              href="#">Flight Permits &amp; Compliance</a></div>
+          <div class="flex flex-col gap-space-sm"><span
+              class="font-label-mono-sm text-label-mono-sm uppercase text-on-surface">Connect &amp; Dispatch</span><span
+              class="font-body-sm text-body-sm text-on-surface-variant">Los Angeles • Atlanta • Worldwide
+              Ops</span><span
+              class="font-label-mono-sm text-label-mono-sm text-secondary font-semibold tracking-wide">ops@skyboundproduction.com</span>
+            <div class="flex items-center gap-space-sm pt-space-xs"><a
+                class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all"
+                href="https://wa.me/94788898332" rel="noopener noreferrer" target="_blank" aria-label="WhatsApp"><svg
+                  viewBox="0 0 448 512" class="w-4 h-4 fill-current">
+                  <path
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                </svg></a><a
+                class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all"
+                href="https://www.facebook.com/profile.php?id=61564801180956&amp;mibextid=ZbWKwL"
+                rel="noopener noreferrer" target="_blank" aria-label="Facebook"><svg viewBox="0 0 320 512"
+                  class="w-4 h-4 fill-current">
+                  <path
+                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                </svg></a><a
+                class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all"
+                href="https://www.instagram.com/_rasi_r_rajapaksha_?stkn=cWN1bGFhajZtdDR0" rel="noopener noreferrer"
+                target="_blank" aria-label="Instagram"><svg viewBox="0 0 448 512" class="w-4 h-4 fill-current">
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                </svg></a><a
+                class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all"
+                href="https://www.tiktok.com/@skybound.producti2?_r=1&amp;_t=ZS-99y1sm1ZZty" rel="noopener noreferrer"
+                target="_blank" aria-label="TikTok"><svg viewBox="0 0 448 512" class="w-4 h-4 fill-current">
+                  <path
+                    d="M448 209.9a210.1 210.1 0 0 1-122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278a74.6 74.6 0 1 0 52.2 71.2V0h89.1a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
+                </svg></a></div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center justify-between pt-space-lg gap-space-md bg-surface-container-lowest">
+          <span class="font-body-sm text-body-sm text-outline">© 2024 Sky Bound Production. All rights reserved.
+            Cinematic aerial engineering.</span>
+          <div class="flex items-center gap-space-lg"><a
+              class="font-body-sm text-body-sm text-outline hover:text-on-surface transition-colors" href="#">Flight
+              Safety &amp; Waivers</a><a
+              class="font-body-sm text-body-sm text-outline hover:text-on-surface transition-colors" href="#">Terms of
+              Dispatch</a><a class="font-body-sm text-body-sm text-outline hover:text-on-surface transition-colors"
+              href="#">Privacy Policy</a></div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function() {
+        var btn = document.getElementById('mobile-menu-btn');
+        var panel = document.getElementById('mobile-menu-panel');
+        if (!btn || !panel) return;
+
+        function closeMenu() {
+          panel.classList.add('hidden');
+          btn.querySelector('span').textContent = 'menu';
+        }
+        btn.addEventListener('click', function() {
+          var isHidden = panel.classList.toggle('hidden');
+          btn.querySelector('span').textContent = isHidden ? 'menu' : 'close';
+        });
+        panel.querySelectorAll('a').forEach(function(a) {
+          a.addEventListener('click', closeMenu);
+        });
+      })();
+    </script>
+  </body>
+
+</html>
